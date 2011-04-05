@@ -20,10 +20,10 @@
         months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 
         /**
-     * Given a formatted string, replace the necessary items and return.
-     * Example: Time.now().strftime("%B %d, %Y") => February 11, 2008
-     * @param {String} format The formatted string used to format the results
-     */
+         * Given a formatted string, replace the necessary items and return.
+         * Example: Time.now().strftime("%B %d, %Y") => February 11, 2008
+         * @param {String} format The formatted string used to format the results
+         */
         strftime: function (date, format) {
             var day = date.getDay(),
                 month = date.getMonth(),
@@ -63,12 +63,12 @@
         },
 
         /**
-     * Return the distance of time in words between two Date's
-     * Example: '5 days ago', 'about an hour ago'
-     * @param {Date} fromTime The start date to use in the calculation
-     * @param {Date} toTime The end date to use in the calculation
-     * @param {Boolean} Include the time in the output
-     */
+         * Return the distance of time in words between two Date's
+         * Example: '5 days ago', 'about an hour ago'
+         * @param {Date} fromTime The start date to use in the calculation
+         * @param {Date} toTime The end date to use in the calculation
+         * @param {Boolean} Include the time in the output
+         */
         distanceOfTimeInWords: function (fromTime, toTime, includeTime) {
             var delta = parseInt((toTime.getTime() - fromTime.getTime()) / 1000, 10);
             if (delta < 60) {
