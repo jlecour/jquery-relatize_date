@@ -35,22 +35,22 @@
 
       return format.replace(/\%([aAbBcdeHImMpSwyY])/g, function(part) {
         switch(part[1]) {
-          case 'a': return $r.shortDays[day]; break;
-          case 'A': return $r.days[day]; break;
-          case 'b': return $r.shortMonths[month]; break;
-          case 'B': return $r.months[month]; break;
-          case 'c': return date.toString(); break;
-          case 'd': return pad(date.getDate()); break;
-          case 'e': return date.getDate(); break;
-          case 'H': return pad(hours); break;
-          case 'I': return pad((hours + 12) % 12); break;
-          case 'm': return pad(month + 1); break;
-          case 'M': return pad(minutes); break;
-          case 'p': return hours > 12 ? 'PM' : 'AM'; break;
-          case 'S': return pad(date.getSeconds()); break;
-          case 'w': return day; break;
-          case 'y': return pad(date.getFullYear() % 100); break;
-          case 'Y': return date.getFullYear().toString(); break;
+          case 'a': return $r.shortDays[day];
+          case 'A': return $r.days[day];
+          case 'b': return $r.shortMonths[month];
+          case 'B': return $r.months[month];
+          case 'c': return date.toString();
+          case 'd': return pad(date.getDate());
+          case 'e': return date.getDate();
+          case 'H': return pad(hours);
+          case 'I': return pad((hours + 12) % 12);
+          case 'm': return pad(month + 1);
+          case 'M': return pad(minutes);
+          case 'p': return hours > 12 ? 'PM' : 'AM';
+          case 'S': return pad(date.getSeconds());
+          case 'w': return day;
+          case 'y': return pad(date.getFullYear() % 100);
+          case 'Y': return date.getFullYear().toString();
         }
       });
     },
